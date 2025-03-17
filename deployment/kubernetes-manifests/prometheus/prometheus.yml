@@ -271,7 +271,7 @@ spec:
         app: prometheus
     spec:
       containers:
-      - image: prom/prometheus:v2.0.0
+      - image: prom/prometheus:v2.41.0
         imagePullPolicy: IfNotPresent
         name: prometheus
         command:
@@ -320,10 +320,10 @@ metadata:
   name: prometheus
   namespace: kube-system
 spec:
-  type: NodePort
+  type: "NodePort"
   ports:
   - port: 9090
     targetPort: 9090
-    nodePort: 30003
+    nodePort: 31090
   selector:
     app: prometheus
