@@ -1040,11 +1040,11 @@ spec:
           timeoutSeconds: 5
         resources:
           limits:
-            cpu: 500m
-            memory: 2000Mi
+            cpu: 3000m
+            memory: 3000Mi
           requests:
-            cpu: 100m
-            memory: 300Mi
+            cpu: 3000m
+            memory: 3000Mi
         securityContext:
           capabilities:
             add:
@@ -1350,11 +1350,11 @@ spec:
           timeoutSeconds: 5
         resources:
           limits:
-            cpu: 500m
-            memory: 2000Mi
+            cpu: 3000m
+            memory: 3000Mi
           requests:
-            cpu: 100m
-            memory: 300Mi
+            cpu: 3000m
+            memory: 3000Mi
         securityContext:
           capabilities:
             add:
@@ -1528,11 +1528,15 @@ spec:
           timeoutSeconds: 5
         resources:
           limits:
-            cpu: 500m
-            memory: 2000Mi
+            cpu: 3000m
+            memory: 3000Mi
           requests:
-            cpu: 100m
-            memory: 300Mi
+            cpu: 3000m
+            memory: 3000Mi
+        securityContext:
+          capabilities:
+            add:
+            - NET_ADMIN
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -1755,10 +1759,6 @@ spec:
           requests:
             cpu: 100m
             memory: 300Mi
-        securityContext:
-          capabilities:
-            add:
-            - NET_ADMIN
 ---
 apiVersion: apps/v1
 kind: Deployment
